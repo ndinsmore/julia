@@ -184,7 +184,7 @@ const _IUTF8_SHIFT_MASK = _IUTF8State(0b1111)
 const _IUTF8_DFA_ACCEPT = _IUTF8State(0)
 const _IUTF8_DFA_INVALID = _IUTF8State(4)
 
-const _IUTF8_DFA_TABLE, _IUTF8_DFA_REVERSE_TABLE = begin
+const _IUTF8_DFA_TABLE, _IUTF8_DFA_REVERSE_TABLE = let
     # It should be noted that even though the invalid state is state 4 the shift is 1
     # which is the second lowest state shift.
     shifts = [0, 13, 6, 10, 4]
