@@ -340,7 +340,7 @@ end
     b = codeunit(s, i)
     u = UInt32(b) << 24
     #Check u rather than b here because it force compiler to calculate u now
-    (u >= 0x80000000) || return reinterpret(Char, u)
+    (b >= 0x80) || return reinterpret(Char, u)
     return getindex_continued(s, i, u)
 end
 
